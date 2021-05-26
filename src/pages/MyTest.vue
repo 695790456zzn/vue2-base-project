@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import MyComponent from '../components/MyComponent'
+import MyComponent from 'comp/MyComponent'
 import { mapMutations } from 'vuex'
 export default {
   components: {
@@ -19,11 +19,13 @@ export default {
     }
   },
   mounted () {
+    document.title = 'Test' // 浏览器标签设置
     this.setChainId('34')
     this.initStore()
   },
   methods: {
     initStore () {
+      console.log('fdsfsfsfsdfsdfsfs')
       this.$store.commit('setNetWork', 'HECO')
     },
     ...mapMutations(['setChainId'])

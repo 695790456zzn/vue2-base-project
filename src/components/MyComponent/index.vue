@@ -1,6 +1,8 @@
 <template>
   <div>
     {{test}}{{chainId}}{{network}}
+    <img :src="hecoImg"
+         alt="">
   </div>
 </template>
 
@@ -9,7 +11,8 @@ import { mapGetters, mapState } from 'vuex'
 export default {
   data () {
     return {
-      test: '子组件'
+      test: '子组件',
+      hecoImg: require('img/heco_icon.png')
     }
   },
   computed: {
