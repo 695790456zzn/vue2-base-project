@@ -1,12 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import MyTest from '../pages/MyTest'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    component: MyTest
+    component: () => import('../pages/MyTest')
   }
 ]
 
