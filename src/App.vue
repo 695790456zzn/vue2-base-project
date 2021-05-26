@@ -38,8 +38,8 @@ export default {
 @import "./assets/style/global.css";
 @import "./assets/style/common.css";
 #app {
-  background-color: #f8fcff;
   width: 100%;
   height: 100%;
+  background-color: #f8fcff;
 }
 </style>
