@@ -7,14 +7,14 @@
 <script>
 import Cookies from 'js-cookie';
 export default {
-  'name': 'App',
+  name: 'App',
   data () {
     return {};
   },
   mounted () {
     this.initLanguage();
   },
-  'methods': {
+  methods: {
     /**
      * 初始化语言环境
      */
@@ -22,9 +22,6 @@ export default {
       if (Cookies.get('lang') === 'ZH') {
         this.$i18n.locale = 'zh';
         Cookies.set('lang', 'ZH', { 'domain': `${process.env.VUE_APP_DOMAIN}` });
-      } else if (Cookies.get('lang') === 'EN') {
-        this.$i18n.locale = 'en';
-        Cookies.set('lang', 'EN', { 'domain': `${process.env.VUE_APP_DOMAIN}` });
       } else { // 默认显示英文
         this.$i18n.locale = 'en';
         Cookies.set('lang', 'EN', { 'domain': `${process.env.VUE_APP_DOMAIN}` });
