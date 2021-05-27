@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "loading",
+  'name': 'loading',
   data() {
     return {};
   }

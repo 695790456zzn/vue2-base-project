@@ -1,6 +1,6 @@
 const getters = {
-  chainId: state => state.chainId,
-  network: state => state.network
-}
+  'chainId': state => state.chainId,
+  'network': state => state.network
+};
 
-export default getters
+export default getters;

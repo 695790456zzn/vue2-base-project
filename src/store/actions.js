@@ -1,10 +1,10 @@
 const actions = {
   setChainId ({ commit }, data) {
-    commit('setChainId', data)
+    commit('setChainId', data);
   },
   setNetWork ({ commit }, data) {
-    commit('setNetWork', data)
+    commit('setNetWork', data);
   }
-}
+};
 
-export default actions
+export default actions;
