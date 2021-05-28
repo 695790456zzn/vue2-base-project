@@ -12,9 +12,7 @@ module.exports = {
   },
   chainWebpack: config => {
     config.output.filename('assets/js/[name].[hash].js').chunkFilename('assets/js/[name].[hash].js').end();
-    config.when(process.env.NODE_ENV === 'development', config => {
-      config.plugin('webpack-bundle-analyzer').use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
-    })
+    config.plugin('webpack-bundle-analyzer').use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
     config.resolve.alias
       .set('@', resolve('src'))
       .set('assets', resolve('src/assets'))
