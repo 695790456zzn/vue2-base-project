@@ -5,7 +5,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import App from './App.vue';
 import store from './store';
-import ElementUI from 'element-ui';
+import { Button } from 'element-ui';
 import VueI18n from 'vue-i18n';
 import Cookies from 'js-cookie';
 import router from './router';
@@ -21,20 +21,20 @@ Vue.prototype.$post = post;
 Vue.use(Vuex);
 Vue.use(VueI18n);
 const i18n = new VueI18n({
-  'locale': Cookies.get('lang') || 'en', // set locale
-  'messages': {
+  locale: Cookies.get('lang') || 'en', // set locale
+  messages: {
     'zh': require('./lan/zh.js'), // 中文语言包
     'en': require('./lan/en.js') // 英文语言包
   }
 });
 
 Vue.config.productionTip = false;
-Vue.use(ElementUI);
+Vue.use(Button);
 Vue.use(YouswapHeader);
 import './assets/style/customElement.css';
 
 new Vue({
-  'render': h => h(App),
+  render: h => h(App),
   i18n,
   router,
   store
